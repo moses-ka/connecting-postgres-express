@@ -2,6 +2,7 @@ import express from "express";
 const app = express();
 const port = 3001;
 import StudentRoutes from "./components/StudentRoutes.js";
+import routerOrder from "./components/ordersRoutes.js";
 app.use(express.json());
 
 
@@ -14,3 +15,4 @@ app.listen(port, () => {
 });
 
 app.use("/users/",StudentRoutes);
+app.use("/orders/",routerOrder);
